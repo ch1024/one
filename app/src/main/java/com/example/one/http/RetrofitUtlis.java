@@ -31,7 +31,7 @@ public class RetrofitUtlis implements ContractUtlis {
                 .build();
         apiService = retrofit.create(ApiService.class);
     }
-    public RetrofitUtlis getInstance(){
+    public static RetrofitUtlis getInstance(){
         if (instance==null){
             synchronized (RetrofitUtlis.class){
                 if (instance==null){
