@@ -5,7 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class BaseActivity <P>  extends AppCompatActivity {
+import com.example.one.baseApi.BaseView;
+
+public abstract class BaseActivity <P extends BasePresenter>  extends AppCompatActivity implements BaseView {
     protected P presenter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
