@@ -4,11 +4,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.one.base.BaseActivity;
+import com.example.one.bean.Beans;
+import com.example.one.contract.Contract;
+import com.example.one.presenter.MainPresenter;
+
+public class MainActivity extends BaseActivity<MainPresenter> implements Contract.View {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int setViewId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected MainPresenter getPresenter() {
+        return new MainPresenter();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public void onSSon(Beans beans) {
+
     }
 }

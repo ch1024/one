@@ -15,6 +15,7 @@ public abstract class BaseActivity <P extends BasePresenter>  extends AppCompatA
         setContentView(setViewId());
         if (presenter==null){
             presenter=getPresenter();
+            presenter.onAtton(this);
         }
         initView();
         initData();
